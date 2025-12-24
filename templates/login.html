@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: black;
+        }
+        h1{
+            color: white;
+        }
+        form{
+            border: white solid 1px;
+            width: 300px;
+            height: 150px;
+            align-items: center;
+            padding-top: 30px ;
+            padding-bottom:30px ;
+            border-radius: 20px;
+            margin-left: 600px;
+            background-color: white;
+        }
+        button{
+            height: 40px;
+            width: 100px;
+            background-color: black;
+            color: white;
+            border-radius: 50px;
+            font-size: 20px;
+
+        }
+        input{
+            width:250px;
+            height:30px;
+            background-color: none;
+            border-radius: 20px;
+            border: 0px;
+            padding-left: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Admin Login</h1>
+
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+
+    <form method="POST">
+        <input type="text" name="username" placeholder="Username" required><br><br>
+        <input type="password" name="password" placeholder="Password" required><br><br>
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
